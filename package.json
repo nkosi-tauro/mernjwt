@@ -4,8 +4,11 @@
   "description": "mern stack app with jwt auth",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "nkosi",
   "license": "MIT",
@@ -19,7 +22,10 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.0",
     "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0",
+    "passport-jwt": "^4.0.0",  "scripts": {
+      "start": "node server.js",
+      "server": "nodemon server.js"
+    },
     "validator": "^12.1.0"
   },
   "devDependencies": {
